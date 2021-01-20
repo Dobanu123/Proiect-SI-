@@ -32,14 +32,14 @@ void loop()
   duration=pulseIn(echopin,HIGH);
   distance=(duration/2)/29.1; 
   
-  if(distance > 0 && distance <= 20){
+  if(distance <= 10){
     digitalWrite(G,LOW);
     digitalWrite(B,LOW)
      _delay_ms(500);
     digitalWrite(R,HIGH);
   _delay_ms(500);
   }
-  else if(distance > 20 && distance <= 80){
+  else if(distance > 10 && distance <= 20){
         digitalWrite(R,LOW);
          digitalWrite(G,LOW);
          _delay_ms(500);
@@ -47,7 +47,7 @@ void loop()
     
       }
       
-       else if(distance > 80 && distance <= 120 ){
+       else if(distance > 30  ){
         digitalWrite(R,LOW);
         digitalWrite(B,LOW);
          _delay_ms(500);
